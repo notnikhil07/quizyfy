@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: rgb(2, 0, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.quiz_section{
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    /* height: 500px; */
+    width: 50%;
+    border-radius: 10px;
+    padding: 30px;
+    user-select: none;
+}
+hr{
+    margin-top: 20px;
+
+}
+.all_answer{
+    margin-top: 30px;
+}
+
+.all_answer li{
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+    list-style: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    min-height: 50px;
+    /* width: 50%; */
+    cursor: pointer;
+}
+
+.all_answer li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  transform: scale(1.3);
+  accent-color: #007bff;
+}
+
+
+button{
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(0, 0, 151);
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
