@@ -79,3 +79,23 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+
+    .quiz_section{
+        width: 80%;
+    }
+    .sumbit{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .quiz_section{
+        width: 90%;
+    }
+    button{
+        border-radius: 30px;
+        width: 80px;
+    }
+}
