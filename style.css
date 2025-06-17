@@ -15,6 +15,65 @@ body{
     align-items: center;
 }
 
+#startScreen{
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    /* height: 500px; */
+    width: 50%;
+    border-radius: 10px;
+    padding: 30px;
+    user-select: none;
+    /* display: none; */
+}
+
+
+.difficult_select{
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    /* height: 500px; */
+    width: 50%;
+    border-radius: 10px;
+    padding: 30px;
+    user-select: none;
+    display: none;
+
+}
+
+
+.difficult_level{
+    margin-top: 20px;
+}
+
+.difficult_level li{
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+    list-style: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    min-height: 50px;
+    /* width: 50%; */
+    cursor: pointer;
+}
+
+
+.difficult_level li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+
 
 .quiz_section{
     margin-top: 50px;
@@ -24,7 +83,23 @@ body{
     border-radius: 10px;
     padding: 30px;
     user-select: none;
+    display: none;
 }
+
+
+#quiz h5{
+    font-weight: 400;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+
 hr{
     margin-top: 20px;
 
