@@ -165,6 +165,38 @@ button{
     height: 40px;
     cursor: pointer;
 }
+@media screen and (max-width: 1000px) {
+    
+    #startScreen{
+        width: 90%;
+    
+    }
+
+    #quizstartBtn{
+        width: 60%;
+    }
+
+    .difficult_select{
+        width: 90%;
+    }
+    .dif_sub{
+        width: 60%;
+    }
+
+
+    .quiz_section{
+        width: 50%;
+    }
+    .sumbit{
+        width: 40%;
+    }
+    .result button{
+        border-radius: 30px;
+        width: 50%;
+    }
+    
+
+}
 
 
 
@@ -195,7 +227,7 @@ button{
     }
     .result button{
         border-radius: 30px;
-        width: 40px;
+        width: 80%;
     }
     
 
@@ -231,4 +263,5 @@ button{
         border-radius: 30px;
         width: 90%;
 }
+
 }
