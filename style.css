@@ -143,7 +143,7 @@ button{
     background-color: rgb(0, 0, 151);
     border: 1px solid black;
     border-radius: 30px;
-    width: 20%;
+    width: 60%;
     height: 40px;
     cursor: pointer;
 }
@@ -169,6 +169,23 @@ button{
 
 
 @media screen and (max-width: 768px) {
+    
+    #startScreen{
+        width: 90%;
+    
+    }
+
+    #quizstartBtn{
+        width: 60%;
+    }
+
+    .difficult_select{
+        width: 90%;
+    }
+    .dif_sub{
+        width: 60%;
+    }
+
 
     .quiz_section{
         width: 80%;
@@ -179,10 +196,29 @@ button{
     .result button{
         border-radius: 30px;
         width: 40px;
-}
+    }
+    
+
 }
 
 @media screen and (max-width: 400px) {
+
+    #startScreen{
+        width: 90%;
+    
+    }
+
+    #quizstartBtn{
+        width: 80%;
+    }
+    .difficult_select{
+        width: 90%;
+    }
+    .dif_sub{
+        width: 80%;
+    }
+
+
     .quiz_section{
         width: 90%;
     }
