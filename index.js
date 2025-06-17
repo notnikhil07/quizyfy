@@ -10,7 +10,19 @@ const difficultSelect = document.querySelector(".difficult_select");
 const difBtn = document.querySelector(".dif_sub");
 const submitBtn = document.querySelector("#submit");
 const quizSection = document.querySelector('.quiz_section');
+const scoreSection = document.querySelector(".score_section");
+const totalQuestion = document.querySelector("#total");
+const correctAns = document.querySelector("#correct");
+const incorrectAns = document.querySelector("#incorrect");
+
+
 const showDif = document.querySelector('.show_dif');
+const startingMinutes = 1;
+let time = startingMinutes*60
+
+const countDownEl = document.querySelector(".countdown");
+
+
 
 let difficultyValue; // Global variable
 let quizData = [];
@@ -41,6 +53,35 @@ difBtn.addEventListener("click", () => {
   quizSection.style.display = 'block';
 
   fetchQuizData(); // Now call it here
+  setInterval(updateCountdown, 1000);
+
+
+function updateCountdown(){
+  let minutes = Math.floor(time/60);
+  let seconds = time%60;
+
+  minutes = minutes <= 1? '0' + minutes : minutes;
+  seconds = seconds<10? '0' + seconds : seconds;
+  
+  countDownEl.innerHTML = `${minutes}: ${seconds}`;
+
+  if (time <= 0) {
+    clearInterval(countdownInterval);
+    countDownEl.innerHTML = "00:00";
+
+
+  }
+  else if (time <= 5) {
+    countDownEl.style.backgroundColor = "red";
+  }
+  else if (time <= 15) {
+    countDownEl.style.backgroundColor = "orange";
+  }
+  else if (time <= 25) {
+    countDownEl.style.backgroundColor = "yellow";
+  }
+  time--;
+}
 });
 
 const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
@@ -71,13 +112,11 @@ submitBtn.addEventListener("click", () => {
     deselectedAnswers();
     loadQuiz();
   } else {
-    quiz.innerHTML = `
-      <div class="result">
-        <h2>Your score: ${score}/${quizData.length} Correct Answers</h2>
-        <p>🏆 Congratulations on completing the quiz! 🎉</p>
-        <button class="reload-button" onclick="location.reload()">Play Again ▶️</button>
-      </div>
-    `;
+    quizSection.style.display = "none";
+    scoreSection.style.display = "block";
+    totalQuestion.innerText = "10";
+    correctAns.innerText = `${score}`;
+    incorrectAns.innerText = `${10-score}`;
   }
 });
 

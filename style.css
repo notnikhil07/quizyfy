@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: rgb(38, 0, 1);
+    background-color: rgb(6, 0, 38);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +89,6 @@ body{
 
 #quiz h5{
     font-weight: 400;
-    margin-top: 10px;
     background-color: #007bff;
     color: white;
     text-align: center;
@@ -97,6 +96,25 @@ body{
     width: 70px;
     height: 30px;
     border-radius: 15px;
+}
+
+.details{
+    font-weight: 400;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: end;
+}
+
+.countdown{
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #007bff;
 }
 
 
@@ -148,23 +166,65 @@ button{
     cursor: pointer;
 }
 
-.result{
+
+
+.score_section{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    /* height: 500px; */
+    width: 50%;
+    border-radius: 10px;
+    padding: 30px;
+    user-select: none;
+    display: none;
+}
+
+.score_section p{
+    color: rgb(155, 155, 155);
+}
+
+.score_status{
+    margin-top: 30px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.result button{
-    margin-top: 20px;
-    color: white;
-    background-color: rgb(0, 0, 151);
-    border: 1px solid black;
-    border-radius: 30px;
-    width: 20%;
-    height: 40px;
-    cursor: pointer;
+.score_status div{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 120px;
+    border: 1px solid rgb(194, 194, 194);
 }
+
+.score_status span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+.score_status p{
+    font-size: 20px;
+    color: rgb(111, 111, 111);
+}
+
+
+
+.score_status img{
+    height: 25px;
+}
+
+
 @media screen and (max-width: 1000px) {
     
     #startScreen{
@@ -190,9 +250,9 @@ button{
     .sumbit{
         width: 40%;
     }
-    .result button{
-        border-radius: 30px;
-        width: 50%;
+
+    .score_section{
+        width: 80%;
     }
     
 
@@ -225,9 +285,13 @@ button{
     .sumbit{
         width: 40%;
     }
-    .result button{
-        border-radius: 30px;
-        width: 80%;
+
+    .score_section{
+        width: 90%;
+    }
+
+    .score_status p{
+        font-size: 15px;
     }
     
 
@@ -258,10 +322,5 @@ button{
         border-radius: 30px;
         width: 80px;
     }
-
-    .result button{
-        border-radius: 30px;
-        width: 90%;
-}
 
 }
